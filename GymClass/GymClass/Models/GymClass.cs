@@ -9,9 +9,9 @@ namespace GymClass.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        DateTime StartTime { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get { return StartTime + Duration; }  }
         public TimeSpan Duration { get; set; }
-        public DateTime EndTime { get; set; }
         public string Description { get; set; }
     }
 }
